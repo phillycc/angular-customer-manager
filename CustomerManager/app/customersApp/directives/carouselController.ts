@@ -1,6 +1,4 @@
-﻿'use strict';
-
-class CarouselController {
+﻿class CarouselController {
 
     public images: Array<string>;
     public image: string;
@@ -42,12 +40,14 @@ class CarouselController {
     init = (): void => {
         this.$timeout(this.nextImageTimeout, 5 * 1000);
     }
-}
+};
 
-define(['app'], function (app) {
+//define(['app'], function (app) {
 
-    app.register.controller('CarouselController', CarouselController);
+//    app.register.controller('CarouselController', CarouselController);
 
-});  
+//});  
 
-//export = CarouselController;
+export = CarouselController;     
+
+//tsc 
