@@ -1,0 +1,15 @@
+﻿<link href="../../../../Content/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" />
+<div class="directivesPlayground view indent">
+    <div class="container">
+
+        <carousel ng-images='["http://images2.wikia.nocookie.net/__cb20110811172434/fallingskies/images/f/fd/Totoro_normal.gif", "http://fc03.deviantart.net/fs28/i/2009/250/7/4/MUSASHI_MIYAMOTO_by_BARCYD.jpg", "http://fc08.deviantart.net/fs71/f/2012/066/3/5/goku_happy_by_kzo-d4s20sy.png";]'></carousel>
+
+        <div ng-controller="CarouselController as vm" ng-init='vm.setImages(["http://images2.wikia.nocookie.net/__cb20110811172434/fallingskies/images/f/fd/Totoro_normal.gif","http://images.wikia.com/pokemon/images/archive/4/49/20110526012846!Ash_Pikachu.png","http://images2.wikia.nocookie.net/__cb20111231185621/trigun/images/2/2b/Vash1.jpg"])'>
+            <div my-background-image='vm.images[index]' class="wide" swipe-left="vm.nextImage()" swipe-right="vm.prevImage()"></div>
+            <div ng-click="vm.prevImage()" class="pointer">Prev</div>
+            <div ng-click="vm.nextImage()" class="pointer">Next</div>
+            <div ng-click="vm.images.push('http://upload.wikimedia.org/wikipedia/en/5/59/Himura_Kenshin_OVA.jpg');" class="pointer"><em>Add Image</em></div>
+        </div>
+
+    </div>
+</div>
