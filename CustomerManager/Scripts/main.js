@@ -1,4 +1,4 @@
-﻿/// <reference path="typings/requirejs/require.d.ts" />
+/// <reference path="typings/requirejs/require.d.ts" />
 require.config({
     baseUrl: 'app',
     urlArgs: 'bust=' + (new Date()).getTime(),
@@ -9,7 +9,6 @@ require.config({
         carouselController: 'customersApp/directives/carouselController'
     }
 });
-
 require([
     'customersApp/animations/listAnimations',
     'app',

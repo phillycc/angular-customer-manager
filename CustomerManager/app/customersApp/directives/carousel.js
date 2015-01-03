@@ -1,8 +1,7 @@
-﻿//http://thecodebarbarian.wordpress.com/2013/09/23/the-8020-guide-to-writing-angularjs-directives/
+//http://thecodebarbarian.wordpress.com/2013/09/23/the-8020-guide-to-writing-angularjs-directives/
 'use strict';
 define(['app', 'customersApp/directives/bootstrapSlider', 'customersApp/directives/myBackgroundImage', 'customersApp/directives/swipeLeft', 'customersApp/directives/swipeRight'], function (app) {
     var injectParams = ['$q', '$parse', 'dataService'];
-
     var carouselDirective = function ($q, $parse, dataService) {
         return {
             restrict: 'E',
@@ -17,9 +16,7 @@ define(['app', 'customersApp/directives/bootstrapSlider', 'customersApp/directiv
             }
         };
     };
-
     carouselDirective['$inject'] = injectParams;
-
     app.directive('carousel', carouselDirective);
 });
 //# sourceMappingURL=carousel.js.map

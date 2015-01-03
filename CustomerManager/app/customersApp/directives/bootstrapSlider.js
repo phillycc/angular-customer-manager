@@ -1,7 +1,6 @@
-﻿'use strict';
+'use strict';
 define(['app', 'slider'], function (app, slider) {
     var injectParams = ['$q', '$parse', 'dataService'];
-
     var bootstrapSliderDirective = function () {
         return function (scope, element, attributes) {
             $(document).ready(function () {
@@ -14,12 +13,10 @@ define(['app', 'slider'], function (app, slider) {
                     max: max,
                     tooltip: 'hide'
                 });
-
                 // Update view to reflect model
                 scope.$watch(attributes['ngModel'], function (v) {
                     $(element[0]).slider('setValue', v);
                 });
-
                 // Update model to reflect view
                 $(element[0]).slider().on('slide', function (ev) {
                     scope.$apply(function () {
@@ -29,9 +26,7 @@ define(['app', 'slider'], function (app, slider) {
             });
         };
     };
-
     bootstrapSliderDirective['$inject'] = injectParams;
-
     app.directive('bootstrapSlider', bootstrapSliderDirective);
 });
 //# sourceMappingURL=bootstrapSlider.js.map

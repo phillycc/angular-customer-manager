@@ -2,7 +2,8 @@
 
 'use strict';
 
-define(['customersApp/services/routeResolver', 'kendo_ui_core'], function () {
+define(['customersApp/services/routeResolver', 'kendo_ui_core', 'carouselController'], 
+    (routeResolver, kendo_ui_core, CarouselController) => {
 
     var app = angular.module('customersApp', ['ngRoute', 'ngAnimate', 'routeResolverServices',
         'wc.directives', 'wc.animations', 'ui.bootstrap', 'breeze.angular', 'kendo.directives']);

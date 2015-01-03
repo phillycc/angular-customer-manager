@@ -40,7 +40,7 @@
     init = (): void => {
         this.$timeout(this.nextImageTimeout, 5 * 1000);
     }
-};
+}
 
 //define(['app'], function (app) {
 

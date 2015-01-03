@@ -1,4 +1,4 @@
-﻿/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
 /// <reference path="../../../../scripts/kendo/2014.3.1119/typescript/kendo.all.d.ts" />
 /// <reference path="../../../../scripts/typings/requirejs/require.d.ts" />
 var DirectivesPlaygroundController = (function () {
@@ -10,13 +10,10 @@ var DirectivesPlaygroundController = (function () {
         this.authService = authService;
         this.dataService = dataService;
         this.modalService = modalService;
-        this.$inject = [
-            '$location', '$filter', '$window',
-            '$timeout', 'authService', 'dataService', 'modalService'];
+        this.$inject = ['$location', '$filter', '$window', '$timeout', 'authService', 'dataService', 'modalService'];
     }
     return DirectivesPlaygroundController;
 })();
-
 //declare var app: any;
 //app.register.controller('CustomersController', CustomersController); //app is indefined here
 //export = CustomersController;

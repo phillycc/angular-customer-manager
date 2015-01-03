@@ -1,4 +1,4 @@
-﻿/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
 /// <reference path="../../../../scripts/typings/requirejs/require.d.ts" />
 /// <amd-dependency path="app" />
 'use strict';
@@ -16,9 +16,7 @@ var CustomersController = (function () {
         this.authService = authService;
         this.dataService = dataService;
         this.modalService = modalService;
-        this.$inject = [
-            '$location', '$filter', '$window',
-            '$timeout', 'authService', 'dataService', 'modalService'];
+        this.$inject = ['$location', '$filter', '$window', '$timeout', 'authService', 'dataService', 'modalService'];
         this.DisplayModeEnum = {
             Card: 0,
             List: 1
@@ -40,7 +38,6 @@ var CustomersController = (function () {
                 _this.totalRecords = data.totalRecords;
                 _this.customers = data.results;
                 _this.filterCustomers(''); //Trigger initial filter
-
                 _this.$timeout(function () {
                     _this.cardAnimationClass = ''; //Turn off animation since it won't keep up with filtering
                 }, 1000);
@@ -62,17 +59,14 @@ var CustomersController = (function () {
                 _this.$location.path(_this.authService.loginPath + _this.$location.$$path); //TODO debug any walkaround
                 return;
             }
-
             var cust = _this.getCustomerById(id);
             var custName = cust.firstName + ' ' + cust.lastName;
-
             var modalOptions = {
                 closeButtonText: 'Cancel',
                 actionButtonText: 'Delete Customer',
                 headerText: 'Delete ' + custName + '?',
                 bodyText: 'Are you sure you want to delete this customer?'
             };
-
             _this.modalService.showModal({}, modalOptions).then(function (result) {
                 if (result === 'ok') {
                     _this.dataService.deleteCustomer(id).then(function () {
@@ -120,17 +114,14 @@ var CustomersController = (function () {
         this.searchText = null;
         this.cardAnimationClass = '.card-animation';
         this.listDisplayModeEnabled = false;
-
         //paging
         this.totalRecords = 0;
         this.pageSize = 10;
         this.currentPage = 1;
-
         this.init();
     }
     return CustomersController;
 })();
-
 //declare var app: any;
 //app.register.controller('CustomersController', CustomersController); //app is indefined here
 //export = CustomersController;

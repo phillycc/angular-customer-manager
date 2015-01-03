@@ -1,7 +1,6 @@
-﻿'use strict';
+'use strict';
 define(['app'], function (app) {
     var injectParams = ['$q', '$parse', 'dataService'];
-
     //var myBackgroundImageDirective: Function = () => {
     //    return (scope: ng.IScope, element: ng.IAugmentedJQuery, attributes: ng.IAttributes) => {
     //        scope.$watch(attributes['myBackgroundImage'], v => {
@@ -29,9 +28,7 @@ define(['app'], function (app) {
             }
         };
     };
-
     myBackgroundImageDirective['$inject'] = injectParams;
-
     app.directive('myBackgroundImage', myBackgroundImageDirective);
 });
 //# sourceMappingURL=myBackgroundImage.js.map

@@ -1,4 +1,4 @@
-﻿/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="../../../../scripts/typings/angularjs/angular.d.ts" />
 /// <reference path="../../../../scripts/kendo/2014.3.1119/typescript/kendo.all.d.ts" />
 /// <reference path="../../../../scripts/typings/requirejs/require.d.ts" />
 /// <amd-dependency path="app" />
@@ -13,9 +13,7 @@ var KendoController = (function () {
         this.authService = authService;
         this.dataService = dataService;
         this.modalService = modalService;
-        this.$inject = [
-            '$location', '$filter', '$window',
-            '$timeout', 'authService', 'dataService', 'modalService'];
+        this.$inject = ['$location', '$filter', '$window', '$timeout', 'authService', 'dataService', 'modalService'];
         this.init = function () {
             //todo
         };
@@ -29,12 +27,10 @@ var KendoController = (function () {
             format: 'MMMM dd yyyy',
             value: new Date()
         };
-
         this.init();
     }
     return KendoController;
 })();
-
 //declare var app: any;
 //app.register.controller('CustomersController', CustomersController); //app is indefined here
 //export = CustomersController;
